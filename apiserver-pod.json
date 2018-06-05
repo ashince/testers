@@ -26,8 +26,8 @@
           },
           {
             "name": "local",
-            "hostPort": 8088,
-            "containerPort": 8088
+            "hostPort": 8080,
+            "containerPort": 8080
           }
         ],
         "volumeMounts": [
@@ -45,7 +45,7 @@
         "livenessProbe": {
           "httpGet": {
             "path": "/healthz",
-            "port": 8088
+            "port": 8080
           },
           "initialDelaySeconds": 15,
           "timeoutSeconds": 15
