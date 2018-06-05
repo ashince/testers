@@ -7,6 +7,6 @@ metadata:
   namespace: default
 spec:
   ports:
-  - port: 80
+  - port: 8089
   selector:
     app: webserver
