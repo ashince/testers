@@ -21,13 +21,13 @@
         "ports": [
           {
             "name": "https",
-            "hostPort": 443,
-            "containerPort": 443
+            "hostPort": 8443,
+            "containerPort": 8443
           },
           {
             "name": "local",
-            "hostPort": 8080,
-            "containerPort": 8080
+            "hostPort": 8088,
+            "containerPort": 8088
           }
         ],
         "volumeMounts": [
@@ -45,7 +45,7 @@
         "livenessProbe": {
           "httpGet": {
             "path": "/healthz",
-            "port": 8080
+            "port": 8088
           },
           "initialDelaySeconds": 15,
           "timeoutSeconds": 15
