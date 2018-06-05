@@ -1,0 +1,18 @@
+kind: "ReplicationController"
+apiVersion: "v1"
+metadata:
+  name: "webserver-controller"
+spec:
+  replicas: 1
+  selector:
+    app: "webserver"
+  template:
+    spec:
+      containers:
+        - name: "tomcat"
+          image: "localhost:5000/webserver"
+          ports:
+            - containerPort: 80
+    metadata:
+      labels:
+        app: "webserver"
